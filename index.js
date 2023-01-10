@@ -26,6 +26,10 @@ let persons = [
     }
 ]
 
+app.get('/api/persons', (request, response) => {
+    console.log('got the request');
+})
+
 const PORT = 3001
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
