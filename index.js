@@ -27,7 +27,7 @@ let persons = [
 ]
 
 app.get('/api/persons', (request, response) => {
-    console.log('got the request');
+    response.json(persons)
 })
 
 const PORT = 3001
