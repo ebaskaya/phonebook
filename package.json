@@ -4,6 +4,10 @@
   "description": "exercises for full stack open",
   "main": "index.js",
   "scripts": {
+    "build:ui": "rm -rf build && cd ~/fso/fso-exercises/part2/phonebook && npm run build && cp -r build ~/fso/phonebook-backend",
+    "deploy": "fly deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "fly logs",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +23,7 @@
   },
   "homepage": "https://github.com/ebaskaya/phonebook-backend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   },
   "devDependencies": {
